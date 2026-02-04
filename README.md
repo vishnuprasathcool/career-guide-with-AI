@@ -1,2 +1,5 @@
 # career-guide-with-AI
-career guide with the help of AI
+1.HTML + CSS
+2.JavaScript
+3.Next.js
+4.Firebase
