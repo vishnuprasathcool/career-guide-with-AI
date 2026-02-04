@@ -3,6 +3,6 @@
 
 2.JavaScript 
 
-3.React
+3.Next.js
 
 4.Firebase
