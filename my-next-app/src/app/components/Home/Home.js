@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
+import Navbar from '../Navbar/Navbar';
 import './Home.css';
 
 const Home = () => {
@@ -39,15 +40,7 @@ const Home = () => {
 
     return (
         <div className="home-container">
-            <nav className="navbar">
-                <div className="logo">Next Step</div>
-                <div className="nav-links">
-                    <a href="#features">Features</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <button className="nav-cta">Login</button>
-            </nav>
+            <Navbar />
 
             <main className="hero-section">
                 <div className="hero-content">
@@ -58,7 +51,7 @@ const Home = () => {
                         Navigate your professional journey with precision. Our AI-powered platform provides personalized career paths, skill analysis, and resume optimization.
                     </p>
                     <div className="hero-buttons">
-                        <button className="primary-btn">Start Your Journey</button>
+                        <button className="primary-btn">Start Your Journey <span className="arrow">→</span></button>
                         <button className="secondary-btn">Learn More</button>
                     </div>
                 </div>

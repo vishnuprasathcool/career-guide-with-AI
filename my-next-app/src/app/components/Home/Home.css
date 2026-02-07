@@ -3,90 +3,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=BBH+Hegarty&family=Bebas+Neue&family=Changa+One:ital@0;1&family=Damion&family=Figtree:ital,wght@0,300..900;1,300..900&family=Geom:ital,wght@0,300..900;1,300..900&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Momo+Signature&family=Momo+Trust+Display&family=Notable&family=Paytone+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sekuya&family=Syncopate:wght@400;700&display=swap');
 
 .home-container {
-    background-color: #ffffff;
-    min-height: 100vh;
-    font-family: "Manrope", sans-serif;
-    /* Fallback to DM Sans which is very similar */
+    background: linear-gradient(135deg, #fff5f2 0%, #f4f7fa 100%);
+    height: 100vh;
+    font-family: "Google Sans", sans-serif;
     color: #1f1f1f;
-    overflow-x: hidden;
+    overflow: hidden;
+    position: relative;
+}
+
+.home-container::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, rgba(255, 107, 74, 0.15) 0%, rgba(255, 107, 74, 0) 70%);
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: moveBlob1 20s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;
+}
+
+.home-container::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    right: -10%;
+    width: 70vw;
+    height: 70vw;
+    background: radial-gradient(circle, rgba(100, 100, 255, 0.1) 0%, rgba(100, 100, 255, 0) 70%);
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: moveBlob2 25s infinite alternate-reverse cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;
 }
 
 /* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 10%;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #000000;
-}
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #1f1f1f;
-    letter-spacing: -0.5px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #4a4a4a;
-    font-weight: 500;
-    transition: color 0.2s;
-}
-
-.nav-links a:hover {
-    color: #000;
-}
-
-.nav-cta {
-    font-family: "Poppins", sans-serif;
-    background: transparent;
-    border: 1px solid #1f1f1f;
-    padding: 0.5rem 1.25rem;
-    border-radius: 50px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: all 0.2s;
-    color: #000000;
-}
-
-.nav-cta:hover {
-    background: #1f1f1f;
-    color: #ffffff;
-}
 
 /* Hero Section */
+/* Hero Section */
 .hero-section {
-    padding: 4rem 5% 6rem;
-    max-width: 1400px;
-    margin: 0 auto;
+    padding: 0 5%;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-content {
-    margin-top: 5rem;
-    justify-content: center;
-    align-items: center;
-    max-width: 800px;
-    margin-bottom: 5rem;
+    width: 100%;
+    max-width: 900px;
     animation: fadeIn 0.8s ease-out;
+    padding-top: 5rem;
 }
 
 .hero-title {
-    font-size: 4rem;
+    font-family: "Google Sans Flex", sans-serif;
+    font-size: 4.5rem;
     line-height: 1.1;
     font-weight: 500;
     margin-bottom: 1.5rem;
@@ -95,7 +75,7 @@
 
 .highlight {
     letter-spacing: -2px;
-    font-size: 5rem;
+    font-size: 5.2rem;
     color: #ff6b4a;
     /* A nice accent color that pairs with the background */
 }
@@ -117,6 +97,9 @@
 }
 
 .primary-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     background-color: #1f1f1f;
     color: #fff;
     border: none;
@@ -126,6 +109,15 @@
     font-weight: 500;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.primary-btn .arrow {
+    transition: transform 0.2s ease-in-out;
+    display: inline-block;
+}
+
+.primary-btn:hover .arrow {
+    transform: translateX(5px);
 }
 
 .primary-btn:hover {
@@ -207,15 +199,6 @@
         font-size: 2.5rem;
     }
 
-    .navbar {
-        padding: 1rem;
-    }
-
-    .nav-links {
-        display: none;
-        /* Simple hiding for mobile for now */
-    }
-
     .hero-section {
         padding-top: 2rem;
     }
@@ -236,5 +219,25 @@
 
     50% {
         opacity: 0;
+    }
+}
+
+@keyframes moveBlob1 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(15vw, 15vh) scale(1.1);
+    }
+}
+
+@keyframes moveBlob2 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(-15vw, -10vh) scale(1.1);
     }
 }
