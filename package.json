@@ -1,0 +1,20 @@
+{
+  "name": "career-guide-with-ai",
+  "version": "1.0.0",
+  "description": "1.HTML + CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vishnuprasathcool/career-guide-with-AI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vishnuprasathcool/career-guide-with-AI/issues"
+  },
+  "homepage": "https://github.com/vishnuprasathcool/career-guide-with-AI#readme"
+}
