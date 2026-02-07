@@ -1,4 +1,6 @@
+"use client";
 import { useEffect, useState } from "react";
+import './about.css';
 
 export default function NextStepAbout() {
     const text = "NextStep";
@@ -16,7 +18,7 @@ export default function NextStepAbout() {
     }, []);
 
     return (
-        <section className="about-container">
+        <section className="about-container" id="about">
             <h1>{displayText}</h1>
 
             <p className="intro">
