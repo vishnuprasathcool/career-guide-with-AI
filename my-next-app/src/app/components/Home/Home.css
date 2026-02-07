@@ -144,7 +144,7 @@
 /* Features Grid */
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     width: 100%;
 }
@@ -197,10 +197,39 @@
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .highlight {
+        font-size: 3rem;
     }
 
     .hero-section {
-        padding-top: 2rem;
+        padding-top: 5rem;
+        /* Reduced padding to move content up */
+        padding-left: 1rem;
+        padding-right: 1rem;
+        justify-content: flex-start;
+        /* Align to top to avoid cutting off bottom */
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
     }
 }
 
