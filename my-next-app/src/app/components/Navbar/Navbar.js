@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import Link from 'next/link';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -7,9 +8,10 @@ const Navbar = () => {
         <nav className="navbar">
             <div className="logo">Next Step</div>
             <div className="nav-links">
-                <a href="#features">Features</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+                <Link href="/">Home</Link>
+                <Link href="#features">Features</Link>
+                <Link href="/about">About</Link>
+                <Link href="#contact">Contact</Link>
             </div>
             <button className="nav-cta">Login</button>
         </nav>

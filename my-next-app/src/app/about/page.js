@@ -1,3 +1,4 @@
+import Navbar from '../components/Navbar/Navbar';
 import About from '../components/About/about';
 
 export const metadata = {
@@ -8,6 +9,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <main>
+      <Navbar />
       <About />
     </main>
   );
